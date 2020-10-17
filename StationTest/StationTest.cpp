@@ -1,4 +1,4 @@
-// StationTest.cpp : å®šä¹‰æ§åˆ¶å°åº”ç”¨ç¨‹åºçš„å…¥å£ç‚¹ã€‚
+// StationTest.cpp : ¶¨Òå¿ØÖÆÌ¨Ó¦ÓÃ³ÌĞòµÄÈë¿Úµã¡£
 //
 
 #include "stdafx.h"
@@ -7,11 +7,11 @@
 
 using namespace std;
 
-//å®šä¹‰å‡½æ•°æŒ‡é’ˆç±»å‹å’Œå‡½æ•°æŒ‡é’ˆ
+//¶¨Òåº¯ÊıÖ¸ÕëÀàĞÍºÍº¯ÊıÖ¸Õë
 typedef bool(__cdecl *pGetPos)(double*);
 pGetPos GetPos;
 
-//åˆå§‹åŒ–å‡½æ•°ï¼Œç”¨äºè·å–å‡½æ•°æŒ‡é’ˆ
+//³õÊ¼»¯º¯Êı£¬ÓÃÓÚ»ñÈ¡º¯ÊıÖ¸Õë
 void Init()
 {
 	HINSTANCE hDll = LoadLibrary(L"StationCpp.dll");
@@ -23,12 +23,12 @@ int main()
 	Init();
 	double pos[2] = {0};
 	
-	//è°ƒç”¨GetPoså‰éœ€è°ƒç”¨è¯¥å‡½æ•°ï¼Œç”¨äºSTAThreadæ‰§è¡ŒGetPos
+	//µ÷ÓÃGetPosÇ°Ğèµ÷ÓÃ¸Ãº¯Êı£¬ÓÃÓÚSTAThreadÖ´ĞĞGetPos
 	CoInitialize(NULL);
 	if (GetPos(pos))
 	{
-		std::cout << "ç»åº¦ï¼š" << pos[0] << std::endl;
-		std::cout << "çº¬åº¦ï¼š" << pos[1] << std::endl;
+		std::cout << "¾­¶È£º" << pos[0] << std::endl;
+		std::cout << "Î³¶È£º" << pos[1] << std::endl;
 	}
 
 	getchar();
