@@ -1,0 +1,31 @@
+﻿<Window x:Class="Station.Dialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Station"
+        mc:Ignorable="d"
+        Title="Dialog" Height="570" Width="960">
+    <Window.Resources>
+        <Style TargetType="{x:Type Button}">
+            <Setter Property="HorizontalAlignment" Value="Left" />
+            <Setter Property="VerticalAlignment" Value="Top" />
+            <Setter Property="Background" Value="Transparent" />
+            <Setter Property="BorderBrush" Value="Transparent" />
+        </Style>
+    </Window.Resources>
+    <Viewbox Stretch="Uniform">
+        <Grid Height="540" Width="960" >
+            <Image Source="StationImage.jpg" />
+            <Button  Content="①北京西站" Tag="1" Height="25" Width="90" FontSize="16" Click="Station_Click" Margin="592,29,0,0" Foreground="#FF9C0000"/>
+            <Button  Content="②涿州东站" Tag="2" Height="22" Width="80" FontSize="14" Click="Station_Click" Margin="512,151,0,0"/>
+            <Button  Content="③高碑店东站" Tag="3" Height="22" Width="90" FontSize="14" Click="Station_Click" Margin="374,191,0,0"/>
+            <Button  Content="④保定东站" Tag="4" Height="22" Width="80" FontSize="14" Click="Station_Click" Margin="311,309,0,0"/>
+            <Button  Content="⑤定州东站" Tag="5" Height="22" Width="80" FontSize="14" Click="Station_Click" Margin="313,406,0,0"/>
+            <Button  Content="⑥正定机场站" Tag="6" Height="22" Width="90" FontSize="14" Click="Station_Click" Margin="135,440,0,0"/>
+            <Button  Content="⑦滹沱河铁路交叉点" Tag="7" Height="22" Width="135" FontSize="14" Click="Station_Click" Margin="208,480,0,0"/>
+            <Button  Content="⑧石家庄站" Tag="8" Height="25" Width="90" FontSize="16" Click="Station_Click" Margin="206,507,0,0" Foreground="#FF9C0000"/>
+        </Grid>
+
+    </Viewbox>
+</Window>
